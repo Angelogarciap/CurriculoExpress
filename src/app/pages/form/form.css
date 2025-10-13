@@ -1,0 +1,162 @@
+form.css * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  border-left: 4px solid #007bff;
+  padding-left: 8px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #dcdfe6bb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  background-color: #f5f6f9be;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+small {
+  display: block;
+  margin-top: -8px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.icon-info {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.info-message {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #007bff;
+  margin-top: -10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type='file'] {
+  padding: 6px;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 0.9rem;
+  color: #333;
+  width: 100%;
+}
+
+textarea {
+  height: 80px;
+  border: 1px solid #ccccccf1;
+  border-radius: 6px;
+  resize: vertical;
+  padding: 10px;
+  font-size: 0.95rem;
+  background-color: #ffffffd2;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea::placeholder,
+input::placeholder {
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: #666;
+  opacity: 0.8;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-row .form-group:first-child {
+  flex: 2;
+}
