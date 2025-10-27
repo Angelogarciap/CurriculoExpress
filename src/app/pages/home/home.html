@@ -1,25 +1,75 @@
-<header>
-  <div class="logo">Curriculo</div>
-  <nav>
-    <ul>
-      <li><a href="#">Criar CV</a></li>
-      <li><a href="#">Temas</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Custos</a></li>
-      <li><a href="#">Contato</a></li>
-      <li><a href="#" class="login">Iniciar Sessão</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- Floating Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a (click)="scrollTo('home')" class="logo">CV</a>
+        <div class="nav-center">
+            <ul class="nav-links" [class.active]="isMenuOpen" #navLinks id="navLinks">
+                <li><a (click)="onNavLinkClick('home')" [class.active]="activeSection === 'home'">Home</a></li>
+                <li><a (click)="onNavLinkClick('tema')" [class.active]="activeSection === 'tema'">Tema</a></li>
+                <li><a (click)="onNavLinkClick('crie-cv')" [class.active]="activeSection === 'crie-cv'">Crie CV</a></li>
+                <li class="mobile-auth-buttons">
+                    <a href="#" class="auth-btn iniciar-sessao-btn">Iniciar Sessão</a>
+                </li>
+            </ul>
+        </div>
+        <div class="auth-buttons">
+            <a href="#" class="auth-btn iniciar-sessao-btn">Iniciar Sessão</a>
+        </div>
+        <button class="menu-toggle" (click)="toggleMenu()" #menuToggle>☰</button>
+    </div>
+</nav>
 
-<section class="hero">
-  <h1>Crie aqui o seu curriculum vitae profissional</h1>
-  <p>Crie o seu próprio CV profissional e descarregue-o em 15 minutos.</p>
-  <a href="#" class="btn">Crie o seu CV</a>
-  <p class="subtexto">Irá ter 65% mais probabilidade de obter emprego</p>
+<!-- Home -->
+<section id="home" class="section">
+    <div class="home-container">
+        <h1 class="home-main-title">Crie aqui o seu curriculum vitae profissional</h1>
+        <p class="home-subtitle">Crie o seu próprio CV profissional e descarregue o em 15 minutos.</p>
+        <button class="home-cta-button">crie seu cv</button>
+        <p class="home-stats">Ira ter 65% mais probabilidade de obter emprego</p>
+    </div>
 </section>
 
-<section class="info">
-  <h2>Como fazer um currículo?</h2>
-  <p>Informações, FAQ, e Dicas para o seu CV.</p>
+<!-- Tema -->
+<section id="tema" class="section">
+    <div>
+        <h1>TEMA</h1>
+        <p class="section-info">Escolha entre diversos templates profissionais</p>
+    </div>
 </section>
+
+<!-- Crie CV  -->
+<section id="crie-cv" class="section">
+    <div>
+        <h1>CRIE CV</h1>
+        <p class="section-info">Preencha seus dados e crie seu currículo em minutos</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Comp</h3>
+                <a (click)="onNavLinkClick('home')">Home</a>
+                <a (click)="onNavLinkClick('tema')">Templates</a>
+                <a (click)="onNavLinkClick('crie-cv')">Criar CV</a>
+            </div>
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <a href="#">Como usar</a>
+                <a href="#">Exemplos</a>
+                <a href="#">Dicas</a>
+            </div>
+            <div class="footer-section">
+                <h3>Suporte</h3>
+                <a href="mailto:suporte@criacv.com">suporte@criacv.com</a>
+                <a href="#">Perguntas Frequentes</a>
+                <a href="#">Ajuda</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ currentYear }} CriaCV. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
