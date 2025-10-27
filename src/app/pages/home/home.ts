@@ -3,7 +3,7 @@ import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
-  styleUrls: ['./home.css']
+  styleUrl: './home.css',
 })
 export class Home implements OnInit {
   @ViewChild('navLinks') navLinksContainer!: ElementRef;
@@ -13,7 +13,7 @@ export class Home implements OnInit {
   activeSection = 'home';
   currentYear = new Date().getFullYear();
 
-   sections = ['home', 'tema', 'crie-cv', 'contact'];
+  sections = ['home', 'tema', 'crie-cv', 'contact'];
 
   ngOnInit() {
     this.updateActiveNav();
@@ -26,25 +26,27 @@ export class Home implements OnInit {
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
-    if (this.isMenuOpen && 
-        this.menuToggle?.nativeElement && 
-        this.navLinksContainer?.nativeElement &&
-        !this.menuToggle.nativeElement.contains(event.target) &&
-        !this.navLinksContainer.nativeElement.contains(event.target)) {
+    if (
+      this.isMenuOpen &&
+      this.menuToggle?.nativeElement &&
+      this.navLinksContainer?.nativeElement &&
+      !this.menuToggle.nativeElement.contains(event.target) &&
+      !this.navLinksContainer.nativeElement.contains(event.target)
+    ) {
       this.closeMenu();
     }
   }
 
   updateActiveNav() {
     let current = 'home';
-    
-    this.sections.forEach(sectionId => {
+
+    this.sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId);
       if (element) {
         const sectionTop = element.offsetTop;
         const sectionHeight = element.clientHeight;
-        
-        if (window.scrollY >= (sectionTop - 200)) {
+
+        if (window.scrollY >= sectionTop - 200) {
           current = sectionId;
         }
       }
@@ -59,12 +61,12 @@ export class Home implements OnInit {
       // Calcula a posição considerando a navbar fixa AWS
       const yOffset = -80;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      
+
       window.scrollTo({
         top: y,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
-      
+
       this.activeSection = sectionId;
     }
   }

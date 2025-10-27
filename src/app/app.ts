@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { Home } from './pages/home/home';
 import { Form } from './pages/form/form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, Form],
+  imports: [RouterOutlet, Home, Form],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
