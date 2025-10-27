@@ -204,7 +204,7 @@
 }
 
 .home-cta-button {
-  background: #000000;
+  background: #0b3560;
   color: #ffffff;
   border: none;
   padding: 18px 50px;
@@ -219,7 +219,7 @@
 }
 
 .home-cta-button:hover {
-  background: #333333;
+  background: #0b3560;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
