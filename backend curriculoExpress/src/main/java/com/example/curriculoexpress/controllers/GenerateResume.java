@@ -26,7 +26,7 @@ public class GenerateResume {
     @PostMapping("/gerar-curriculo")
     public ResponseEntity<byte[]> createResume(@RequestBody CurriculoRequest request) throws Exception {
         // Your existing code remains unchanged—no issues here
-        InputStream template = getClass().getResourceAsStream("/templates/curriculo_template.jrxml");
+        InputStream template = getClass().getResourceAsStream("/templates/curriculo_template2.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(template);
 
         Map<String, Object> params = new HashMap<>();

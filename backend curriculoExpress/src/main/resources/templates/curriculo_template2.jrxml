@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+    name="Curriculo"
+    pageWidth="595"
+    pageHeight="842"
+    columnWidth="555"
+    leftMargin="20"
+    rightMargin="20"
+    topMargin="20"
+    bottomMargin="20"
+    uuid="12345678-1234-1234-1234-123456789abc">
+
+    <!-- Parâmetros -->
+    <parameter name="nome" class="java.lang.String"/>
+    <parameter name="email" class="java.lang.String"/>
+    <parameter name="telefone" class="java.lang.String"/>
+    <parameter name="socialMedia" class="java.lang.String"/>
+    <parameter name="universityName" class="java.lang.String"/>
+    <parameter name="courseAndSemester" class="java.lang.String"/>
+    <parameter name="lastCompany" class="java.lang.String"/>
+    <parameter name="lastActivities" class="java.lang.String"/>
+    <parameter name="extraExperience" class="java.lang.String"/>
+
+    <!-- Título -->
+    <title>
+        <band height="80">
+            <textField>
+                <reportElement x="0" y="0" width="555" height="30" uuid="11111111-1111-1111-1111-111111111111"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="35" width="555" height="20" uuid="22222222-2222-2222-2222-222222222222"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{telefone}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="55" width="555" height="20" uuid="33333333-3333-3333-3333-333333333333"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <!-- Corpo -->
+    <detail>
+        <band height="400">
+
+            <!-- Experiência Extra -->
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="20"/>
+                <textElement><font size="14" isBold="true"/></textElement>
+                <text><![CDATA[Experiência Extra]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="25" width="555" height="40"/>
+                <textFieldExpression><![CDATA[$P{extraExperience}]]></textFieldExpression>
+            </textField>
+
+            <!-- Última Experiência -->
+            <staticText>
+                <reportElement x="0" y="75" width="555" height="20"/>
+                <textElement><font size="14" isBold="true"/></textElement>
+                <text><![CDATA[Última Experiência Profissional]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="100" width="555" height="20"/>
+                <textFieldExpression><![CDATA[$P{lastCompany}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="125" width="555" height="40"/>
+                <textFieldExpression><![CDATA[$P{lastActivities}]]></textFieldExpression>
+            </textField>
+
+            <!-- Formação -->
+            <staticText>
+                <reportElement x="0" y="175" width="555" height="20"/>
+                <textElement><font size="14" isBold="true"/></textElement>
+                <text><![CDATA[Formação Acadêmica]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="200" width="555" height="20"/>
+                <textFieldExpression><![CDATA[$P{universityName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="225" width="555" height="20"/>
+                <textFieldExpression><![CDATA[$P{courseAndSemester}]]></textFieldExpression>
+            </textField>
+
+            <!-- Redes Sociais -->
+            <staticText>
+                <reportElement x="0" y="265" width="555" height="20"/>
+                <textElement><font size="14" isBold="true"/></textElement>
+                <text><![CDATA[Redes Sociais]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="290" width="555" height="20"/>
+                <textFieldExpression><![CDATA[$P{socialMedia}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+</jasperReport>

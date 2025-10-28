@@ -123,15 +123,15 @@
   <div class="section">
     <h2>Informações Pessoais</h2>
     <div class="personal-info">
-      <label>Nome do Cargo <input type="text" /></label>
-      <label>Primeiro Nome <input type="text" /></label>
-      <label>Último Nome <input type="text" /></label>
-      <label>Email <input type="text" /></label>
-      <label>Telefone <input type="text" /></label>
-      <label>País <input type="text" /></label>
+      <label>Nome do Cargo <input type="text"/></label>
+      <label>Primeiro Nome <input type="text" id="firstName"/></label>
+      <label>Último Nome <input type="text" id="lastName"/></label>
+      <label>Email <input type="text" id="email"/></label>
+      <label>Telefone <input type="text" id="phoneNumber"/></label>
+      <label>País <input type="text"/></label>
       <label>Cidade <input type="text" /></label>
       <label>CEP <input type="text" /></label>
-      <label>LinkedIn <input type="text" /></label>
+      <label>LinkedIn <input type="text" id="socialMedia"/></label>
       <label>Github <input type="text" /></label>
     </div>
   </div>
@@ -151,12 +151,13 @@
       <option value="ensino-superior-completo">Ensino Superior Completo</option>
     </select>
 
-    <label>Nome da Instituição <textarea></textarea></label>
+    <label>Nome da Instituição <textarea id="university"></textarea></label>
     <label
       >Nome do Curso e Período
       <textarea
+        id="course"
         placeholder="Insira o nome do seu curso e o período que está cursando"
-      ></textarea>
+        ></textarea>
     </label>
   </div>
 
@@ -197,9 +198,9 @@
       marcadores para destacar as experiências.
     </p>
     <ul>
-      <label>Nome da Empresa <input type="text" /></label>
+      <label>Nome da Empresa <input type="text" id="lastCompanyName"/></label>
       <p>Descreva suas funções e o que aprendeu no cargo</p>
-      <textarea></textarea>
+      <textarea id="workExp"></textarea>
       <button>Adicionar experiência</button>
     </ul>
   </div>
@@ -208,13 +209,13 @@
   <div class="section">
     <h2>Informações Adicionais</h2>
     <ul>
-      <textarea placeholder="Informe sobre suas qualidades e formações adjacentes"></textarea>
+      <textarea id="extraExp" placeholder="Informe sobre suas qualidades e formações adjacentes"></textarea>
       <button>Adicionar informações</button>
     </ul>
   </div>
   <div class="section">
     <ul>
-      <button>Criar formulário</button>
+      <button (click)="submitForm()">Criar formulário</button>
     </ul>
   </div>
 </div>
