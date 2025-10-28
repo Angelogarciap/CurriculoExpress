@@ -1,0 +1,134 @@
+:host {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Braah One', sans-serif;
+}
+
+.login-container {
+  background-color: #fff;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #0b3560;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .logo h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header .logo span {
+  font-family: 'Comic Sans MS', cursive;
+}
+.login {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: white;
+  padding: 0 20px;
+}
+.login h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+.password-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+.password-field .forgot-password {
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.password-field .forgot-password:hover {
+  text-decoration: underline;
+}
+/* Botão */
+button {
+  background-color: #0b3560;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0b3560;
+}
+.register-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-text a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .login h2 {
+    font-size: 1.5rem;
+  }
+
+  header .logo h1 {
+    font-size: 1.5rem;
+  }
+}
